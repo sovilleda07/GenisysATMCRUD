@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 // Agregar los namespaces necesarios
 using System.Data;
@@ -79,7 +80,7 @@ namespace GenisysATM.Models
         /// <summary>
         /// Método para la inserción de datos
         /// </summary>
-        public static bool InsertarCliente()
+        public static bool InsertarCliente(Cliente nuevoCliente)
         {
             Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
             SqlCommand cmd = conexion.EjecutarComando("sp_insertarCliente");
@@ -87,8 +88,6 @@ namespace GenisysATM.Models
             // Establecer el comando como un Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
-            // Instancia de la clase Cliente
-            Cliente nuevoCliente = new Cliente();
 
             // Parámetros del Stored Procedure
             cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
@@ -113,8 +112,9 @@ namespace GenisysATM.Models
 
                 return true;
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
+               // MessageBox.Show(ex.StackTrace);
 
                 return false;
             }
