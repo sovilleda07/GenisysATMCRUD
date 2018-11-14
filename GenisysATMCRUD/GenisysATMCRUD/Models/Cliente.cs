@@ -29,7 +29,7 @@ namespace GenisysATM.Models
         /// <returns>Un objeto de tipo Cliente.</returns>
         public static Cliente ObtenerCliente(string identidad)
         {
-            Conexion conexion = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
             string sql;
             Cliente resultado = new Cliente();
 
@@ -73,6 +73,57 @@ namespace GenisysATM.Models
             {
                 conexion.CerrarConexion();
             }
+
         }
+
+        /// <summary>
+        /// Método para la inserción de datos
+        /// </summary>
+        public static bool InsertarCliente()
+        {
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+            SqlCommand cmd = conexion.EjecutarComando("sp_insertarCliente");
+
+            // Establecer el comando como un Stored Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Instancia de la clase Cliente
+            Cliente nuevoCliente = new Cliente();
+
+            // Parámetros del Stored Procedure
+            cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@nombre"].Value = nuevoCliente.nombres;
+            cmd.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@apellido"].Value = nuevoCliente.apellidos;
+            cmd.Parameters.Add(new SqlParameter("@identidad", SqlDbType.Char, 13));
+            cmd.Parameters["@identidad"].Value = nuevoCliente.identidad;
+            cmd.Parameters.Add(new SqlParameter("@direccion", SqlDbType.NVarChar, 2000));
+            cmd.Parameters["@direccion"].Value = nuevoCliente.direccion;
+            cmd.Parameters.Add(new SqlParameter("@telefono", SqlDbType.Char, 9));
+            cmd.Parameters["@telefono"].Value = nuevoCliente.telefono;
+            cmd.Parameters.Add(new SqlParameter("@celular", SqlDbType.Char, 9));
+            cmd.Parameters["@celular"].Value = nuevoCliente.celular;
+
+            // intentamos ejecutar el procedimiento
+            try
+            {
+                conexion.EstablecerConexion();
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (SqlException)
+            {
+
+                return false;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+        }
+
     }
 }
