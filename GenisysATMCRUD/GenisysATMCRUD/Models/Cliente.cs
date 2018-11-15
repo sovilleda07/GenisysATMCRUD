@@ -82,7 +82,9 @@ namespace GenisysATM.Models
         /// </summary>
         public static bool InsertarCliente(Cliente nuevoCliente)
         {
+            // instanciamos la conexion
             Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+            // enviamos el comando a ejecutar
             SqlCommand cmd = conexion.EjecutarComando("sp_insertarCliente");
 
             // Establecer el comando como un Stored Procedure
@@ -122,6 +124,80 @@ namespace GenisysATM.Models
             {
                 conexion.CerrarConexion();
             }
+
+        }
+
+        public static List<Cliente> LeerTodos()
+        {
+            // instanciamos la clase conexion
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+
+            // Lista una de tipo de Cliente
+            List<Cliente> resultados = new List<Cliente>();
+
+            // Creamos el query
+            string sql = @"SELECT id, nombres, apellidos, identidad, direccion, telefono, celular
+                            FROM ATM.Cliente";
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+
+            
+            try
+            {
+                // Establecemos la conexions
+                conexion.EstablecerConexion();
+                // Ejecutamos el query'vía un ExecuteReader
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                // Recorremos los elementos del Reader y los almacenamos
+                // en la lista de tipo Cliente
+                while (rdr.Read())
+                {
+                    Cliente elCliente = new Cliente();
+                    // Asignamos los valores de Reader al objeto Cliente
+                    elCliente.id = Convert.ToInt16(rdr[0]);
+                    elCliente.nombres = rdr.GetString(1);
+                    elCliente.apellidos = rdr.GetString(2);
+                    elCliente.identidad = rdr.GetString(3);
+                    elCliente.direccion = rdr.GetString(4);
+                    elCliente.telefono = rdr.GetString(5);
+                    elCliente.celular = rdr.GetString(6);
+
+                    // Agregamos el Cliente a la lista
+                    resultados.Add(elCliente);
+                }
+                return resultados;
+
+            }
+            catch (SqlException)
+            {
+                return resultados;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+            
+        }
+
+        /// <summary>
+        /// ARREGLAR
+        /// </summary>
+        /// <param name="elCliente"></param>
+        /// <returns></returns>
+        public static bool actualizarCliente(Cliente elCliente)
+        {
+            // instanciamos la clase conexion
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando("sp_actualizarCliente");
+
+            // definimos el tipo de comando
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            return true;
 
         }
 

@@ -32,12 +32,43 @@ namespace GenisysATMCRUD
             if (Cliente.InsertarCliente(nuevo))
             {
                 MessageBox.Show("Agregado");
+                ListarListBox();
             }
             else
             {
                 MessageBox.Show("Error");
             }
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ListarListBox();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ListarListBox()
+        {
+            lbClientes.Items.Clear();
+            // Instanciamos la Clase Cliente
+            Cliente elCliente = new Cliente();
+
+            // Almacenamos todos los clientes existentes
+            List<Cliente> listaClientes = Cliente.LeerTodos();
+
+            if (listaClientes.Any())
+            {
+                listaClientes.ForEach(client => lbClientes.Items.Add(client.nombres.ToString() + "  " + client.apellidos.ToString()));
+
+            }
+            else
+            {
+                lbClientes.Items.Add("No hay Clientes disponibles");
+            }
         }
     }
 }
