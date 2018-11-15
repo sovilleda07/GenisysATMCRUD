@@ -29,7 +29,7 @@ namespace GenisysATM.Models
         /// <returns>CuentaCliente el objeto que contiene la información de la cuenta del cliente</returns>
         public static CuentaCliente ObtenerCliente(string cuenta)
         {
-            Conexion conn = new Conexion(@"(local)\sqlexpress", "GenisysATM_V2");
+            Conexion conn = new Conexion(@"(local)", "GenisysATM_V2");
             CuentaCliente laCuenta = new CuentaCliente();
             string sql = @"SELECT *
                            FROM ATM.CuentaCliente
