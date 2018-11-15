@@ -231,12 +231,6 @@ namespace GenisysATM.Models
 
         }
 
-
-
-
-
-        //-------DANGER----
-
         /// <summary>
         /// ARREGLAR
         /// </summary>
@@ -247,12 +241,98 @@ namespace GenisysATM.Models
             // instanciamos la clase conexion
             Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
             // Enviamos el comando a ejecutar
-            SqlCommand cmd = conexion.EjecutarComando("sp_actualizarCliente");
+            SqlCommand cmd = conexion.EjecutarComando("sp_ActualizarCliente");
 
             // definimos el tipo de comando
             cmd.CommandType = CommandType.StoredProcedure;
 
-            return true;
+            // Declaramos los parámetros necesairos 
+            cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@nombre"].Value = elCliente.nombres;
+            cmd.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@apellido"].Value = elCliente.apellidos;
+            cmd.Parameters.Add(new SqlParameter("@identidad", SqlDbType.Char, 13));
+            cmd.Parameters["@identidad"].Value = elCliente.identidad;
+            cmd.Parameters.Add(new SqlParameter("@direccion", SqlDbType.NVarChar, 2000));
+            cmd.Parameters["@direccion"].Value = elCliente.direccion;
+            cmd.Parameters.Add(new SqlParameter("@telefono", SqlDbType.Char, 9));
+            cmd.Parameters["@telefono"].Value = elCliente.telefono;
+            cmd.Parameters.Add(new SqlParameter("@celular", SqlDbType.Char, 9));
+            cmd.Parameters["@celular"].Value = elCliente.celular;
+
+            // intentamos ejecutar el procedimiento
+            try
+            {
+                conexion.EstablecerConexion();
+
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                // MessageBox.Show(ex.StackTrace);
+
+                return false;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+        }
+
+        /// <summary>
+        /// Método para obtener la informacion del cliente seleccionado
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <returns>los datos para llenar los textbox</returns>
+        public static Cliente ObtenerInformacionCliente(string nombres)
+        {
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+            string sql;
+            Cliente resultado = new Cliente();
+
+            // Query SQL
+            sql = @"SELECT *
+                    FROM ATM.Cliente
+                    WHERE nombres = @nombres";
+
+            SqlCommand cmd = conexion.EjecutarComando(sql);
+            SqlDataReader rdr;
+
+            try
+            {
+                using (cmd)
+                {
+                    cmd.Parameters.Add("@nombres", SqlDbType.NVarChar, 100).Value = nombres;
+
+                    rdr = cmd.ExecuteReader();
+                }
+
+                while (rdr.Read())
+                {
+                    resultado.id = Convert.ToInt16(rdr[0]);
+                    resultado.nombres = rdr.GetString(1);
+                    resultado.apellidos = rdr.GetString(2);
+                    resultado.identidad = rdr.GetString(3);
+                    resultado.direccion = rdr.GetString(4);
+                    resultado.telefono = rdr.GetString(5);
+                    resultado.celular = rdr.GetString(6);
+
+                   
+                }
+
+                return resultado;
+            }
+            catch (SqlException ex)
+            {
+                return resultado;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
 
         }
 

@@ -106,6 +106,7 @@
             this.lbClientes.Name = "lbClientes";
             this.lbClientes.Size = new System.Drawing.Size(263, 316);
             this.lbClientes.TabIndex = 7;
+            this.lbClientes.Click += new System.EventHandler(this.lbClientes_Click);
             // 
             // lblClientes
             // 

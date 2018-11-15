@@ -48,7 +48,26 @@ namespace GenisysATMCRUD
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            
+            //Instanciamos la Clase Cliente
+            Cliente actualizar = new Cliente();
+            actualizar.nombres = txtNombres.Text;
+            actualizar.apellidos = txtApellidos.Text;
+            actualizar.identidad = txtIdentidad.Text;
+            actualizar.direccion = txtDireccion.Text;
+            actualizar.telefono = txtTelefono.Text;
+            actualizar.celular = txtCelular.Text;
+
+            if (Cliente.actualizarCliente(actualizar))
+            {
+                MessageBox.Show("Actualizado");
+                ListarListBox();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+
         }
 
         private void ListarListBox()
@@ -103,5 +122,21 @@ namespace GenisysATMCRUD
             }
         }
 
+        private void lbClientes_Click(object sender, EventArgs e)
+        {
+            // Creamos un objeto de tipo Cliente
+            Cliente elCliente = new Cliente();
+
+            Cliente.ObtenerInformacionCliente(lbClientes.SelectedItem.ToString());
+
+            txtNombres.Text = elCliente.nombres;
+            txtApellidos.Text = elCliente.apellidos;
+            txtIdentidad.Text = elCliente.identidad;
+            txtDireccion.Text = elCliente.direccion;
+            txtTelefono.Text = elCliente.telefono;
+            txtCelular.Text = elCliente.celular;
+
+            //MessageBox.Show(lbClientes.SelectedItem.ToString());
+        }
     }
 }
