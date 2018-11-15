@@ -78,7 +78,7 @@ namespace GenisysATM.Models
         }
 
         /// <summary>
-        /// Método para la inserción de datos
+        /// Método para la inserción de datos del Cliente
         /// </summary>
         public static bool InsertarCliente(Cliente nuevoCliente)
         {
@@ -127,6 +127,10 @@ namespace GenisysATM.Models
 
         }
 
+        /// <summary>
+        /// Método para listar todos los clientes
+        /// </summary>
+        /// <returns>Una lista con todos los clientes</returns>
         public static List<Cliente> LeerTodos()
         {
             // instanciamos la clase conexion
@@ -147,7 +151,7 @@ namespace GenisysATM.Models
             {
                 // Establecemos la conexions
                 conexion.EstablecerConexion();
-                // Ejecutamos el query'vía un ExecuteReader
+                // Ejecutamos el query vía un ExecuteReader
                 SqlDataReader rdr = cmd.ExecuteReader();
 
                 // Recorremos los elementos del Reader y los almacenamos
@@ -167,6 +171,7 @@ namespace GenisysATM.Models
                     // Agregamos el Cliente a la lista
                     resultados.Add(elCliente);
                 }
+                // retornamos la lista de los clientes
                 return resultados;
 
             }
@@ -181,6 +186,56 @@ namespace GenisysATM.Models
 
             
         }
+
+        /// <summary>
+        /// Método para la eliminación de un cliente
+        /// </summary>
+        /// <param name="elCliente"></param>
+        /// <returns></returns>
+        public static bool eliminarCliente(Cliente elCliente)
+        {
+            // Instanciamos la conexion
+            Conexion conexion = new Conexion(@"(local)", "GenisysATM_V2");
+
+            // Enviamos el comando a ejecutar
+            SqlCommand cmd = conexion.EjecutarComando("sp_EliminarCliente");
+
+            // Definimos que tipo de comando es
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Definimos los parametros del Stored Procedure
+            cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
+            cmd.Parameters["@nombre"].Value = elCliente.nombres;
+
+            //cmd.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar, 100));
+            //cmd.Parameters["@apellido"].Value = elCliente.apellidos;
+
+            try
+            {
+                // Establecemos la conexion
+                conexion.EstablecerConexion();
+
+                // Ejecutamos el query de eliminacion
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
+
+        }
+
+
+
+
+
+        //-------DANGER----
 
         /// <summary>
         /// ARREGLAR
