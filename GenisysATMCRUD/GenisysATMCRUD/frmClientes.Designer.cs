@@ -1,6 +1,6 @@
 ﻿namespace GenisysATMCRUD
 {
-    partial class Form1
+    partial class frmClientes
     {
         /// <summary>
         /// Variable del diseñador necesaria.
