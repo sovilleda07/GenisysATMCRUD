@@ -31,6 +31,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnServiciosPublicos = new System.Windows.Forms.Button();
+            this.btnConfiguración = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -63,11 +64,22 @@
             this.btnServiciosPublicos.UseVisualStyleBackColor = true;
             this.btnServiciosPublicos.Click += new System.EventHandler(this.btnServiciosPublicos_Click);
             // 
+            // btnConfiguración
+            // 
+            this.btnConfiguración.Location = new System.Drawing.Point(610, 130);
+            this.btnConfiguración.Name = "btnConfiguración";
+            this.btnConfiguración.Size = new System.Drawing.Size(81, 23);
+            this.btnConfiguración.TabIndex = 3;
+            this.btnConfiguración.Text = "Configuración";
+            this.btnConfiguración.UseVisualStyleBackColor = true;
+            this.btnConfiguración.Click += new System.EventHandler(this.btnConfiguración_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConfiguración);
             this.Controls.Add(this.btnServiciosPublicos);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.lblTitulo);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnServiciosPublicos;
+        private System.Windows.Forms.Button btnConfiguración;
     }
 }

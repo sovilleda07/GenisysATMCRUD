@@ -30,5 +30,11 @@ namespace GenisysATMCRUD
             servicioPublico.ShowDialog();
             //this.Hide();
         }
+
+        private void btnConfiguración_Click(object sender, EventArgs e)
+        {
+            frmConfiguracion configuracion = new frmConfiguracion();
+            configuracion.ShowDialog();
+        }
     }
 }

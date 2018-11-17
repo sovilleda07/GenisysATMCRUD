@@ -150,7 +150,7 @@ namespace GenisysATM.Models
             
             try
             {
-                // Establecemos la conexions
+                // Establecemos la conexion
                 conexion.EstablecerConexion();
                 // Ejecutamos el query vía un ExecuteReader
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -233,7 +233,7 @@ namespace GenisysATM.Models
         }
 
         /// <summary>
-        /// ARREGLAR
+        /// Método para Actualizar el Cliente
         /// </summary>
         /// <param name="elCliente"></param>
         /// <returns></returns>

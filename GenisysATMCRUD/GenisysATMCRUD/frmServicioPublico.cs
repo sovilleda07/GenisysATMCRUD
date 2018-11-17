@@ -32,7 +32,7 @@ namespace GenisysATMCRUD
         }
 
         /// <summary>
-        /// Método para listar todos los Servicios en el list bos
+        /// Método para listar todos los Servicios en el listbox
         /// Al cargar el formulario y al realizarse cualquier otra acción.
         /// </summary>
         private void ListarListBox()
@@ -135,6 +135,11 @@ namespace GenisysATMCRUD
             }
         }
 
+        /// <summary>
+        /// Evento para Eliminar un Servicio Público
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             // Verificar que se seleccionó un elemento de la lista
