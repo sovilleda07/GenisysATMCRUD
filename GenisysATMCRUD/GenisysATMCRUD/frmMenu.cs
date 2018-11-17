@@ -22,5 +22,11 @@ namespace GenisysATMCRUD
             frmClientes clientes = new frmClientes();
             this.Hide();
         }
+
+        private void btnServiciosPublicos_Click(object sender, EventArgs e)
+        {
+            frmServicioPublico servicioPublico = new frmServicioPublico();
+            this.Hide();
+        }
     }
 }

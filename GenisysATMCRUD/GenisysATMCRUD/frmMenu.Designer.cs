@@ -61,6 +61,7 @@
             this.btnServiciosPublicos.TabIndex = 2;
             this.btnServiciosPublicos.Text = "Servicios Publicos";
             this.btnServiciosPublicos.UseVisualStyleBackColor = true;
+            this.btnServiciosPublicos.Click += new System.EventHandler(this.btnServiciosPublicos_Click);
             // 
             // frmMenu
             // 
@@ -71,6 +72,7 @@
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenisysATM";
             this.ResumeLayout(false);
             this.PerformLayout();
