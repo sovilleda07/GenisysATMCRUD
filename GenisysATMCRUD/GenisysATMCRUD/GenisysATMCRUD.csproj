@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SQL Querys\sp_Clientes.sql" />
+    <Content Include="SQL Querys\sp_Configuracion.sql" />
     <Content Include="SQL Querys\sp_ServicioPublico.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
