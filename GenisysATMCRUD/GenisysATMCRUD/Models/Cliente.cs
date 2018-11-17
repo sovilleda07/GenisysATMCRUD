@@ -78,8 +78,10 @@ namespace GenisysATM.Models
         }
 
         /// <summary>
-        /// Método para la inserción de datos del Cliente
+        /// Método para insertar un cliente
         /// </summary>
+        /// <param name="nuevoCliente"></param>
+        /// <returns>Un objeto de tipo Cliente</returns>
         public static bool InsertarCliente(Cliente nuevoCliente)
         {
             // instanciamos la conexion
@@ -191,7 +193,7 @@ namespace GenisysATM.Models
         /// Método para la eliminación de un cliente
         /// </summary>
         /// <param name="elCliente"></param>
-        /// <returns></returns>
+        /// <returns>Un objeto de tipo Cliente</returns>
         public static bool eliminarCliente(Cliente elCliente)
         {
             // Instanciamos la conexion
@@ -207,8 +209,8 @@ namespace GenisysATM.Models
             cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
             cmd.Parameters["@nombre"].Value = elCliente.nombres;
 
-            //cmd.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar, 100));
-            //cmd.Parameters["@apellido"].Value = elCliente.apellidos;
+            cmd.Parameters.Add(new SqlParameter("@identidad", SqlDbType.Char, 13));
+            cmd.Parameters["@identidad"].Value = elCliente.identidad;
 
             try
             {

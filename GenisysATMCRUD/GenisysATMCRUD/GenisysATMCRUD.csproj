@@ -88,9 +88,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL Querys\sp_ActualizarCliente.sql" />
-    <Content Include="SQL Querys\sp_EliminarCliente.sql" />
-    <Content Include="SQL Querys\sp_insertarCliente.sql" />
+    <Content Include="SQL Querys\sp_Clientes.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
