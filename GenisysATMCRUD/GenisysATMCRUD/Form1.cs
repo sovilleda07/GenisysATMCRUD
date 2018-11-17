@@ -127,16 +127,16 @@ namespace GenisysATMCRUD
             // Creamos un objeto de tipo Cliente
             Cliente elCliente = new Cliente();
 
-            Cliente.ObtenerInformacionCliente(lbClientes.SelectedItem.ToString());
+           elCliente= Cliente.ObtenerInformacionCliente(lbClientes.SelectedItem.ToString());
 
             txtNombres.Text = elCliente.nombres;
             txtApellidos.Text = elCliente.apellidos;
             txtIdentidad.Text = elCliente.identidad;
+            txtIdentidad.Enabled = false;
             txtDireccion.Text = elCliente.direccion;
             txtTelefono.Text = elCliente.telefono;
             txtCelular.Text = elCliente.celular;
 
-            //MessageBox.Show(lbClientes.SelectedItem.ToString());
         }
     }
 }

@@ -1,7 +1,7 @@
 USE GenisysATM_V2
 GO
 
-CREATE PROCEDURE ActualizarCliente
+ALTER PROCEDURE sp_ActualizarCliente
 (
 	@nombre nvarchar(100),
 	@apellido nvarchar(100),
@@ -12,12 +12,6 @@ CREATE PROCEDURE ActualizarCliente
 )
 AS
 BEGIN
-	DECLARE @clienteId INT
-
-	SELECT @clienteId = id
-	FROM ATM.Cliente
-	WHERE nombres = @nombre
-
-	UPDATE ATM.Cliente SET nombres = @nombre, apellidos = @apellido, identidad = @identidad, direccion = @direccion, telefono = @telefono, celular = @celular
-	WHERE id = @clienteId
+	UPDATE ATM.Cliente SET nombres = @nombre, apellidos = @apellido, direccion = @direccion, telefono = @telefono, celular = @celular
+	WHERE identidad = @identidad
 END
