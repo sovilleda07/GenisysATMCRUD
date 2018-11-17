@@ -91,8 +91,7 @@ namespace GenisysATM.Models
 
             // Establecer el comando como un Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
-
-
+            
             // Parámetros del Stored Procedure
             cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
             cmd.Parameters["@nombre"].Value = nuevoCliente.nombres;
@@ -248,7 +247,7 @@ namespace GenisysATM.Models
             // definimos el tipo de comando
             cmd.CommandType = CommandType.StoredProcedure;
 
-            // Declaramos los parámetros necesairos 
+            // Declaramos los parámetros necesarios 
             cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.NVarChar, 100));
             cmd.Parameters["@nombre"].Value = elCliente.nombres;
             cmd.Parameters.Add(new SqlParameter("@apellido", SqlDbType.NVarChar, 100));

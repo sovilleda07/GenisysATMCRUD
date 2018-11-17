@@ -73,7 +73,7 @@ namespace GenisysATMCRUD
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error, verifique los datos","Control de Clientes");
+                    MessageBox.Show("Ha ocurrido un error, verifique los datos","Informacion");
                 }
 
 
@@ -165,9 +165,7 @@ namespace GenisysATMCRUD
         /// <param name="e"></param>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            // Instanciamos un objeto de tipo Cliente
-            Cliente elCliente = new Cliente();
-
+            
             // Verificar que se seleccionó un elemento de la lista
             if (lbClientes.SelectedIndex == -1)
             {
@@ -175,6 +173,9 @@ namespace GenisysATMCRUD
             }
             else
             {
+                // Instanciamos un objeto de tipo Cliente
+                Cliente elCliente = new Cliente();
+
                 // Obtenemos el nombre y apellido del cliente seleccionado en el list box
                 elCliente.nombres = lbClientes.SelectedItem.ToString();
                 elCliente.identidad = txtIdentidad.Text;

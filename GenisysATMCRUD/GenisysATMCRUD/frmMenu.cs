@@ -20,13 +20,15 @@ namespace GenisysATMCRUD
         private void btnClientes_Click(object sender, EventArgs e)
         {
             frmClientes clientes = new frmClientes();
-            this.Hide();
+            clientes.ShowDialog();
+            //this.Hide();
         }
 
         private void btnServiciosPublicos_Click(object sender, EventArgs e)
         {
             frmServicioPublico servicioPublico = new frmServicioPublico();
-            this.Hide();
+            servicioPublico.ShowDialog();
+            //this.Hide();
         }
     }
 }

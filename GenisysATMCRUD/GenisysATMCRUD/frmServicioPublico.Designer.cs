@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblServicio = new System.Windows.Forms.Label();
-            this.lbServicioP = new System.Windows.Forms.ListBox();
+            this.lstServicioP = new System.Windows.Forms.ListBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -52,17 +52,18 @@
             this.lblServicio.TabIndex = 1;
             this.lblServicio.Text = "MÓDULO SERVICIO PÚBLICO";
             // 
-            // lbServicioP
+            // lstServicioP
             // 
-            this.lbServicioP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbServicioP.FormattingEnabled = true;
-            this.lbServicioP.ItemHeight = 24;
-            this.lbServicioP.Location = new System.Drawing.Point(12, 62);
-            this.lbServicioP.Name = "lbServicioP";
-            this.lbServicioP.Size = new System.Drawing.Size(263, 172);
-            this.lbServicioP.TabIndex = 8;
-            this.lbServicioP.TabStop = false;
-            this.lbServicioP.UseTabStops = false;
+            this.lstServicioP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstServicioP.FormattingEnabled = true;
+            this.lstServicioP.ItemHeight = 24;
+            this.lstServicioP.Location = new System.Drawing.Point(12, 62);
+            this.lstServicioP.Name = "lstServicioP";
+            this.lstServicioP.Size = new System.Drawing.Size(263, 172);
+            this.lstServicioP.TabIndex = 8;
+            this.lstServicioP.TabStop = false;
+            this.lstServicioP.UseTabStops = false;
+            this.lstServicioP.Click += new System.EventHandler(this.lstServicioP_Click);
             // 
             // gbCliente
             // 
@@ -113,6 +114,7 @@
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnLimpiar
             // 
@@ -123,6 +125,7 @@
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnActualizar
             // 
@@ -133,6 +136,7 @@
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -143,6 +147,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmServicioPublico
             // 
@@ -151,11 +156,12 @@
             this.ClientSize = new System.Drawing.Size(719, 254);
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.gbCliente);
-            this.Controls.Add(this.lbServicioP);
+            this.Controls.Add(this.lstServicioP);
             this.Controls.Add(this.lblServicio);
             this.Name = "frmServicioPublico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenisysATM";
+            this.Load += new System.EventHandler(this.frmServicioPublico_Load);
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             this.panelBotones.ResumeLayout(false);
@@ -167,7 +173,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblServicio;
-        private System.Windows.Forms.ListBox lbServicioP;
+        private System.Windows.Forms.ListBox lstServicioP;
         private System.Windows.Forms.GroupBox gbCliente;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
