@@ -69,6 +69,12 @@
     <Compile Include="frmServicioPublico.Designer.cs">
       <DependentUpon>frmServicioPublico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTarjetaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTarjetaCredito.Designer.cs">
+      <DependentUpon>frmTarjetaCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ATM.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Conexion.cs" />
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmServicioPublico.resx">
       <DependentUpon>frmServicioPublico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTarjetaCredito.resx">
+      <DependentUpon>frmTarjetaCredito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +137,7 @@
     <Content Include="SQL Querys\sp_Configuracion.sql" />
     <Content Include="SQL Querys\sp_ServicioCliente.sql" />
     <Content Include="SQL Querys\sp_ServicioPublico.sql" />
+    <Content Include="SQL Querys\sp_TarjetaCredito.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

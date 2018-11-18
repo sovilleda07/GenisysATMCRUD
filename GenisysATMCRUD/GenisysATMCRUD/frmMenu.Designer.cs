@@ -33,6 +33,8 @@
             this.btnServiciosPublicos = new System.Windows.Forms.Button();
             this.btnConfiguración = new System.Windows.Forms.Button();
             this.btnServicioCliente = new System.Windows.Forms.Button();
+            this.btnTarjeta = new System.Windows.Forms.Button();
+            this.btnCuentaCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -67,10 +69,10 @@
             // 
             // btnConfiguración
             // 
-            this.btnConfiguración.Location = new System.Drawing.Point(626, 130);
+            this.btnConfiguración.Location = new System.Drawing.Point(661, 130);
             this.btnConfiguración.Name = "btnConfiguración";
             this.btnConfiguración.Size = new System.Drawing.Size(81, 23);
-            this.btnConfiguración.TabIndex = 3;
+            this.btnConfiguración.TabIndex = 6;
             this.btnConfiguración.Text = "Configuración";
             this.btnConfiguración.UseVisualStyleBackColor = true;
             this.btnConfiguración.Click += new System.EventHandler(this.btnConfiguración_Click);
@@ -80,16 +82,37 @@
             this.btnServicioCliente.Location = new System.Drawing.Point(272, 130);
             this.btnServicioCliente.Name = "btnServicioCliente";
             this.btnServicioCliente.Size = new System.Drawing.Size(113, 23);
-            this.btnServicioCliente.TabIndex = 4;
+            this.btnServicioCliente.TabIndex = 3;
             this.btnServicioCliente.Text = "Servicios Cliente";
             this.btnServicioCliente.UseVisualStyleBackColor = true;
             this.btnServicioCliente.Click += new System.EventHandler(this.btnServicioCliente_Click);
+            // 
+            // btnTarjeta
+            // 
+            this.btnTarjeta.Location = new System.Drawing.Point(403, 130);
+            this.btnTarjeta.Name = "btnTarjeta";
+            this.btnTarjeta.Size = new System.Drawing.Size(113, 23);
+            this.btnTarjeta.TabIndex = 4;
+            this.btnTarjeta.Text = "Tarjeta Crédito";
+            this.btnTarjeta.UseVisualStyleBackColor = true;
+            this.btnTarjeta.Click += new System.EventHandler(this.btnTarjeta_Click);
+            // 
+            // btnCuentaCliente
+            // 
+            this.btnCuentaCliente.Location = new System.Drawing.Point(522, 130);
+            this.btnCuentaCliente.Name = "btnCuentaCliente";
+            this.btnCuentaCliente.Size = new System.Drawing.Size(113, 23);
+            this.btnCuentaCliente.TabIndex = 5;
+            this.btnCuentaCliente.Text = "Cuenta Cliente";
+            this.btnCuentaCliente.UseVisualStyleBackColor = true;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCuentaCliente);
+            this.Controls.Add(this.btnTarjeta);
             this.Controls.Add(this.btnServicioCliente);
             this.Controls.Add(this.btnConfiguración);
             this.Controls.Add(this.btnServiciosPublicos);
@@ -110,5 +133,7 @@
         private System.Windows.Forms.Button btnServiciosPublicos;
         private System.Windows.Forms.Button btnConfiguración;
         private System.Windows.Forms.Button btnServicioCliente;
+        private System.Windows.Forms.Button btnTarjeta;
+        private System.Windows.Forms.Button btnCuentaCliente;
     }
 }
