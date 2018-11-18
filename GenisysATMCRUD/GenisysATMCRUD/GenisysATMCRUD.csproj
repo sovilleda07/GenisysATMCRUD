@@ -124,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frmServicioCliente.resx">
       <DependentUpon>frmServicioCliente.cs</DependentUpon>
@@ -142,6 +143,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\app-background.png" />
+    <None Include="Resources\atm3.png" />
+    <None Include="Resources\tarjeta.png" />
+    <None Include="Resources\visa64.png" />
+    <None Include="Resources\confi.png" />
+    <None Include="Resources\water.png" />
+    <None Include="Resources\cuenta.png" />
+    <None Include="Resources\servicio.png" />
+    <None Include="Resources\cliente.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\delete-icon.png" />
     <Content Include="SQL Querys\sp_Clientes.sql" />
     <Content Include="SQL Querys\sp_Configuracion.sql" />
     <Content Include="SQL Querys\sp_CuentaCliente.sql" />

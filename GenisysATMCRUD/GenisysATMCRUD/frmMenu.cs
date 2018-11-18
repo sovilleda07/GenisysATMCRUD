@@ -54,5 +54,20 @@ namespace GenisysATMCRUD
             frmCuentaCliente cuenta = new frmCuentaCliente();
             cuenta.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInformacion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Elaborado Por: Sonia Villeda \nPOO IIIP 2018", "Información", MessageBoxButtons.OK);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
