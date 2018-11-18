@@ -57,6 +57,12 @@
     <Compile Include="frmConfiguracion.Designer.cs">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCuentaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaCliente.Designer.cs">
+      <DependentUpon>frmCuentaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <EmbeddedResource Include="frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentaCliente.resx">
+      <DependentUpon>frmCuentaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,7 @@
   <ItemGroup>
     <Content Include="SQL Querys\sp_Clientes.sql" />
     <Content Include="SQL Querys\sp_Configuracion.sql" />
+    <Content Include="SQL Querys\sp_CuentaCliente.sql" />
     <Content Include="SQL Querys\sp_ServicioCliente.sql" />
     <Content Include="SQL Querys\sp_ServicioPublico.sql" />
     <Content Include="SQL Querys\sp_TarjetaCredito.sql" />

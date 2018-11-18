@@ -105,6 +105,7 @@
             this.btnCuentaCliente.TabIndex = 5;
             this.btnCuentaCliente.Text = "Cuenta Cliente";
             this.btnCuentaCliente.UseVisualStyleBackColor = true;
+            this.btnCuentaCliente.Click += new System.EventHandler(this.btnCuentaCliente_Click);
             // 
             // frmMenu
             // 
