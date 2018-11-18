@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentaCliente));
             this.gbServicioCliente = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lsCuenta = new System.Windows.Forms.ListBox();
@@ -55,6 +56,7 @@
             // 
             // gbServicioCliente
             // 
+            this.gbServicioCliente.BackColor = System.Drawing.Color.Transparent;
             this.gbServicioCliente.Controls.Add(this.lblTitulo);
             this.gbServicioCliente.Controls.Add(this.lsCuenta);
             this.gbServicioCliente.Location = new System.Drawing.Point(634, 84);
@@ -67,7 +69,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(40, 16);
+            this.lblTitulo.Location = new System.Drawing.Point(22, 16);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(170, 23);
             this.lblTitulo.TabIndex = 11;
@@ -89,15 +91,17 @@
             // lblCuentaCliente
             // 
             this.lblCuentaCliente.AutoSize = true;
-            this.lblCuentaCliente.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuentaCliente.Location = new System.Drawing.Point(260, 30);
+            this.lblCuentaCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblCuentaCliente.Font = new System.Drawing.Font("Constantia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuentaCliente.Location = new System.Drawing.Point(228, 24);
             this.lblCuentaCliente.Name = "lblCuentaCliente";
-            this.lblCuentaCliente.Size = new System.Drawing.Size(341, 33);
+            this.lblCuentaCliente.Size = new System.Drawing.Size(486, 42);
             this.lblCuentaCliente.TabIndex = 8;
             this.lblCuentaCliente.Text = "MÓDULO CUENTA CLIENTE";
             // 
             // gbListas
             // 
+            this.gbListas.BackColor = System.Drawing.Color.Transparent;
             this.gbListas.Controls.Add(this.lblCliente);
             this.gbListas.Controls.Add(this.panelBotones);
             this.gbListas.Controls.Add(this.gbCliente);
@@ -124,53 +128,61 @@
             this.panelBotones.Controls.Add(this.btnLimpiar);
             this.panelBotones.Controls.Add(this.btnActualizar);
             this.panelBotones.Controls.Add(this.btnEliminar);
-            this.panelBotones.Location = new System.Drawing.Point(83, 286);
+            this.panelBotones.Location = new System.Drawing.Point(55, 286);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(424, 74);
+            this.panelBotones.Size = new System.Drawing.Size(503, 74);
             this.panelBotones.TabIndex = 21;
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Gold;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(13, 25);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(87, 32);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(322, 25);
+            this.btnLimpiar.Location = new System.Drawing.Point(391, 25);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(87, 32);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Gold;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(116, 25);
+            this.btnActualizar.Location = new System.Drawing.Point(139, 25);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(87, 32);
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Gold;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(219, 25);
+            this.btnEliminar.Location = new System.Drawing.Point(265, 25);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(87, 32);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbCliente
@@ -257,10 +269,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GenisysATMCRUD.Properties.Resources.app_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(901, 505);
             this.Controls.Add(this.gbServicioCliente);
             this.Controls.Add(this.lblCuentaCliente);
             this.Controls.Add(this.gbListas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuentaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenisysATM";

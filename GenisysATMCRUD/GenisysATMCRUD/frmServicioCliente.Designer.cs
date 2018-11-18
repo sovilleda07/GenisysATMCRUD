@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmServicioCliente));
             this.lblServicioC = new System.Windows.Forms.Label();
             this.gbListas = new System.Windows.Forms.GroupBox();
             this.lblServicio = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.lstClientes = new System.Windows.Forms.ListBox();
             this.lstServicioP = new System.Windows.Forms.ListBox();
             this.gbServicioCliente = new System.Windows.Forms.GroupBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lstServicioCliente = new System.Windows.Forms.ListBox();
             this.gbListas.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -53,15 +55,17 @@
             // lblServicioC
             // 
             this.lblServicioC.AutoSize = true;
-            this.lblServicioC.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServicioC.Location = new System.Drawing.Point(199, 9);
+            this.lblServicioC.BackColor = System.Drawing.Color.Transparent;
+            this.lblServicioC.Font = new System.Drawing.Font("Constantia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServicioC.Location = new System.Drawing.Point(215, 5);
             this.lblServicioC.Name = "lblServicioC";
-            this.lblServicioC.Size = new System.Drawing.Size(360, 33);
+            this.lblServicioC.Size = new System.Drawing.Size(512, 42);
             this.lblServicioC.TabIndex = 2;
             this.lblServicioC.Text = "MÓDULO SERVICIO CLIENTE";
             // 
             // gbListas
             // 
+            this.gbListas.BackColor = System.Drawing.Color.Transparent;
             this.gbListas.Controls.Add(this.lblServicio);
             this.gbListas.Controls.Add(this.lblCliente);
             this.gbListas.Controls.Add(this.panelBotones);
@@ -80,9 +84,9 @@
             this.lblServicio.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServicio.Location = new System.Drawing.Point(391, 9);
             this.lblServicio.Name = "lblServicio";
-            this.lblServicio.Size = new System.Drawing.Size(74, 23);
+            this.lblServicio.Size = new System.Drawing.Size(82, 23);
             this.lblServicio.TabIndex = 22;
-            this.lblServicio.Text = "Servicio";
+            this.lblServicio.Text = "Servicios";
             // 
             // lblCliente
             // 
@@ -100,53 +104,61 @@
             this.panelBotones.Controls.Add(this.btnLimpiar);
             this.panelBotones.Controls.Add(this.btnActualizar);
             this.panelBotones.Controls.Add(this.btnEliminar);
-            this.panelBotones.Location = new System.Drawing.Point(73, 355);
+            this.panelBotones.Location = new System.Drawing.Point(39, 355);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(424, 74);
+            this.panelBotones.Size = new System.Drawing.Size(484, 74);
             this.panelBotones.TabIndex = 21;
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Gold;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(13, 25);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(87, 32);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(322, 25);
+            this.btnLimpiar.Location = new System.Drawing.Point(385, 25);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(87, 32);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Gold;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(116, 25);
+            this.btnActualizar.Location = new System.Drawing.Point(137, 25);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(87, 32);
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Gold;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(219, 25);
+            this.btnEliminar.Location = new System.Drawing.Point(261, 25);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(87, 32);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbCliente
@@ -205,6 +217,8 @@
             // 
             // gbServicioCliente
             // 
+            this.gbServicioCliente.BackColor = System.Drawing.Color.Transparent;
+            this.gbServicioCliente.Controls.Add(this.lblTitulo);
             this.gbServicioCliente.Controls.Add(this.lstServicioCliente);
             this.gbServicioCliente.Location = new System.Drawing.Point(616, 45);
             this.gbServicioCliente.Name = "gbServicioCliente";
@@ -212,14 +226,24 @@
             this.gbServicioCliente.TabIndex = 4;
             this.gbServicioCliente.TabStop = false;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(15, 16);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(175, 23);
+            this.lblTitulo.TabIndex = 23;
+            this.lblTitulo.Text = "Servicios del Cliente";
+            // 
             // lstServicioCliente
             // 
             this.lstServicioCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstServicioCliente.FormattingEnabled = true;
             this.lstServicioCliente.ItemHeight = 24;
-            this.lstServicioCliente.Location = new System.Drawing.Point(6, 19);
+            this.lstServicioCliente.Location = new System.Drawing.Point(6, 43);
             this.lstServicioCliente.Name = "lstServicioCliente";
-            this.lstServicioCliente.Size = new System.Drawing.Size(265, 412);
+            this.lstServicioCliente.Size = new System.Drawing.Size(265, 388);
             this.lstServicioCliente.TabIndex = 10;
             this.lstServicioCliente.TabStop = false;
             this.lstServicioCliente.UseTabStops = false;
@@ -229,10 +253,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GenisysATMCRUD.Properties.Resources.app_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(916, 488);
             this.Controls.Add(this.gbServicioCliente);
             this.Controls.Add(this.gbListas);
             this.Controls.Add(this.lblServicioC);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmServicioCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenisysATM";
@@ -243,6 +270,7 @@
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             this.gbServicioCliente.ResumeLayout(false);
+            this.gbServicioCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +294,6 @@
         private System.Windows.Forms.ListBox lstServicioCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblServicio;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

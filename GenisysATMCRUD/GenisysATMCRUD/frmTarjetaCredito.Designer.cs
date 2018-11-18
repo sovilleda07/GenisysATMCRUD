@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTarjetaCredito));
             this.gbListas = new System.Windows.Forms.GroupBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.panelBotones = new System.Windows.Forms.Panel();
@@ -45,7 +46,7 @@
             this.lstClientes = new System.Windows.Forms.ListBox();
             this.lblTarjetaCredito = new System.Windows.Forms.Label();
             this.gbServicioCliente = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lstTarjeta = new System.Windows.Forms.ListBox();
             this.gbListas.SuspendLayout();
             this.panelBotones.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // gbListas
             // 
+            this.gbListas.BackColor = System.Drawing.Color.Transparent;
             this.gbListas.Controls.Add(this.lblCliente);
             this.gbListas.Controls.Add(this.panelBotones);
             this.gbListas.Controls.Add(this.gbCliente);
@@ -81,53 +83,61 @@
             this.panelBotones.Controls.Add(this.btnLimpiar);
             this.panelBotones.Controls.Add(this.btnActualizar);
             this.panelBotones.Controls.Add(this.btnEliminar);
-            this.panelBotones.Location = new System.Drawing.Point(83, 286);
+            this.panelBotones.Location = new System.Drawing.Point(57, 286);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(424, 74);
+            this.panelBotones.Size = new System.Drawing.Size(489, 74);
             this.panelBotones.TabIndex = 21;
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Gold;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(13, 25);
+            this.btnAgregar.Location = new System.Drawing.Point(15, 25);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(87, 32);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(322, 25);
+            this.btnLimpiar.Location = new System.Drawing.Point(381, 25);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(87, 32);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Gold;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(116, 25);
+            this.btnActualizar.Location = new System.Drawing.Point(137, 25);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(87, 32);
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Gold;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(219, 25);
+            this.btnEliminar.Location = new System.Drawing.Point(259, 25);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(87, 32);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbCliente
@@ -213,16 +223,18 @@
             // lblTarjetaCredito
             // 
             this.lblTarjetaCredito.AutoSize = true;
-            this.lblTarjetaCredito.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTarjetaCredito.Location = new System.Drawing.Point(243, 22);
+            this.lblTarjetaCredito.BackColor = System.Drawing.Color.Transparent;
+            this.lblTarjetaCredito.Font = new System.Drawing.Font("Constantia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarjetaCredito.Location = new System.Drawing.Point(216, 21);
             this.lblTarjetaCredito.Name = "lblTarjetaCredito";
-            this.lblTarjetaCredito.Size = new System.Drawing.Size(357, 33);
+            this.lblTarjetaCredito.Size = new System.Drawing.Size(504, 42);
             this.lblTarjetaCredito.TabIndex = 5;
             this.lblTarjetaCredito.Text = "MÓDULO TARJETA CRÉDITO";
             // 
             // gbServicioCliente
             // 
-            this.gbServicioCliente.Controls.Add(this.label1);
+            this.gbServicioCliente.BackColor = System.Drawing.Color.Transparent;
+            this.gbServicioCliente.Controls.Add(this.lblTitulo);
             this.gbServicioCliente.Controls.Add(this.lstTarjeta);
             this.gbServicioCliente.Location = new System.Drawing.Point(630, 72);
             this.gbServicioCliente.Name = "gbServicioCliente";
@@ -230,15 +242,15 @@
             this.gbServicioCliente.TabIndex = 6;
             this.gbServicioCliente.TabStop = false;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tarjetas del Cliente";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(6, 17);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(170, 23);
+            this.lblTitulo.TabIndex = 11;
+            this.lblTitulo.Text = "Tarjetas del Cliente";
             // 
             // lstTarjeta
             // 
@@ -247,7 +259,7 @@
             this.lstTarjeta.ItemHeight = 24;
             this.lstTarjeta.Location = new System.Drawing.Point(6, 43);
             this.lstTarjeta.Name = "lstTarjeta";
-            this.lstTarjeta.Size = new System.Drawing.Size(239, 316);
+            this.lstTarjeta.Size = new System.Drawing.Size(239, 340);
             this.lstTarjeta.TabIndex = 10;
             this.lstTarjeta.TabStop = false;
             this.lstTarjeta.UseTabStops = false;
@@ -257,10 +269,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GenisysATMCRUD.Properties.Resources.app_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(889, 465);
             this.Controls.Add(this.gbServicioCliente);
             this.Controls.Add(this.lblTarjetaCredito);
             this.Controls.Add(this.gbListas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTarjetaCredito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenisysATM";
@@ -296,7 +311,7 @@
         private System.Windows.Forms.Label lblMonto;
         private System.Windows.Forms.Label lblTarjetaCredito;
         private System.Windows.Forms.GroupBox gbServicioCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ListBox lstTarjeta;
     }
 }

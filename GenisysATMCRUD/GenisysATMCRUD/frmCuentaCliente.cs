@@ -171,6 +171,7 @@ namespace GenisysATMCRUD
         private void lstClientes_Click(object sender, EventArgs e)
         {
             ListarCuentas();
+            lblTitulo.Text = "Cuentas de " + lstClientes.SelectedItem.ToString();
         }
 
         /// <summary>
@@ -210,8 +211,6 @@ namespace GenisysATMCRUD
             txtPin.Text = laCuenta.pin;
             txtSaldo.Text = laCuenta.saldo.ToString();
             btnAgregar.Enabled = false;
-
-
         }
     }
 }

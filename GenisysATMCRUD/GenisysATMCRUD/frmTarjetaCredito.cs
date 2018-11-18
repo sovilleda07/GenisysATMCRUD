@@ -173,6 +173,7 @@ namespace GenisysATMCRUD
         private void lstClientes_Click(object sender, EventArgs e)
         {
             ListarTarjetas();
+            lblTitulo.Text = "Tarjetas de " + lstClientes.SelectedItem.ToString();
         }
 
         /// <summary>

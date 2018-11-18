@@ -199,6 +199,7 @@ namespace GenisysATMCRUD
         private void lstClientes_Click(object sender, EventArgs e)
         {
             ListarServiciosCliente();
+            lblTitulo.Text = "Servicios de " + lstClientes.SelectedItem.ToString();
         }
 
         /// <summary>
