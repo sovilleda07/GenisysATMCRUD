@@ -32,6 +32,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnServiciosPublicos = new System.Windows.Forms.Button();
             this.btnConfiguración = new System.Windows.Forms.Button();
+            this.btnServicioCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -46,7 +47,7 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(80, 130);
+            this.btnClientes.Location = new System.Drawing.Point(34, 130);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(75, 23);
             this.btnClientes.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnServiciosPublicos
             // 
-            this.btnServiciosPublicos.Location = new System.Drawing.Point(194, 130);
+            this.btnServiciosPublicos.Location = new System.Drawing.Point(132, 130);
             this.btnServiciosPublicos.Name = "btnServiciosPublicos";
             this.btnServiciosPublicos.Size = new System.Drawing.Size(113, 23);
             this.btnServiciosPublicos.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // btnConfiguración
             // 
-            this.btnConfiguración.Location = new System.Drawing.Point(610, 130);
+            this.btnConfiguración.Location = new System.Drawing.Point(626, 130);
             this.btnConfiguración.Name = "btnConfiguración";
             this.btnConfiguración.Size = new System.Drawing.Size(81, 23);
             this.btnConfiguración.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.btnConfiguración.UseVisualStyleBackColor = true;
             this.btnConfiguración.Click += new System.EventHandler(this.btnConfiguración_Click);
             // 
+            // btnServicioCliente
+            // 
+            this.btnServicioCliente.Location = new System.Drawing.Point(272, 130);
+            this.btnServicioCliente.Name = "btnServicioCliente";
+            this.btnServicioCliente.Size = new System.Drawing.Size(113, 23);
+            this.btnServicioCliente.TabIndex = 4;
+            this.btnServicioCliente.Text = "Servicios Cliente";
+            this.btnServicioCliente.UseVisualStyleBackColor = true;
+            this.btnServicioCliente.Click += new System.EventHandler(this.btnServicioCliente_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnServicioCliente);
             this.Controls.Add(this.btnConfiguración);
             this.Controls.Add(this.btnServiciosPublicos);
             this.Controls.Add(this.btnClientes);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnServiciosPublicos;
         private System.Windows.Forms.Button btnConfiguración;
+        private System.Windows.Forms.Button btnServicioCliente;
     }
 }

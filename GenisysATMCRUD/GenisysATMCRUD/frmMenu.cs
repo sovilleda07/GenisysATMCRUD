@@ -36,5 +36,11 @@ namespace GenisysATMCRUD
             frmConfiguracion configuracion = new frmConfiguracion();
             configuracion.ShowDialog();
         }
+
+        private void btnServicioCliente_Click(object sender, EventArgs e)
+        {
+            frmServicioCliente scliente = new frmServicioCliente();
+            scliente.ShowDialog();
+        }
     }
 }
