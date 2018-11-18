@@ -40,18 +40,19 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(210, 19);
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Constantia", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(147, 13);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(497, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(471, 39);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BIENVENIDO A GENISYS ATM";
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(34, 130);
+            this.btnClientes.Location = new System.Drawing.Point(87, 248);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(75, 23);
+            this.btnClientes.Size = new System.Drawing.Size(129, 83);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -59,9 +60,9 @@
             // 
             // btnServiciosPublicos
             // 
-            this.btnServiciosPublicos.Location = new System.Drawing.Point(132, 130);
+            this.btnServiciosPublicos.Location = new System.Drawing.Point(322, 248);
             this.btnServiciosPublicos.Name = "btnServiciosPublicos";
-            this.btnServiciosPublicos.Size = new System.Drawing.Size(113, 23);
+            this.btnServiciosPublicos.Size = new System.Drawing.Size(129, 83);
             this.btnServiciosPublicos.TabIndex = 2;
             this.btnServiciosPublicos.Text = "Servicios Publicos";
             this.btnServiciosPublicos.UseVisualStyleBackColor = true;
@@ -69,9 +70,9 @@
             // 
             // btnConfiguración
             // 
-            this.btnConfiguración.Location = new System.Drawing.Point(661, 130);
+            this.btnConfiguración.Location = new System.Drawing.Point(557, 389);
             this.btnConfiguración.Name = "btnConfiguración";
-            this.btnConfiguración.Size = new System.Drawing.Size(81, 23);
+            this.btnConfiguración.Size = new System.Drawing.Size(129, 83);
             this.btnConfiguración.TabIndex = 6;
             this.btnConfiguración.Text = "Configuración";
             this.btnConfiguración.UseVisualStyleBackColor = true;
@@ -79,9 +80,9 @@
             // 
             // btnServicioCliente
             // 
-            this.btnServicioCliente.Location = new System.Drawing.Point(272, 130);
+            this.btnServicioCliente.Location = new System.Drawing.Point(322, 389);
             this.btnServicioCliente.Name = "btnServicioCliente";
-            this.btnServicioCliente.Size = new System.Drawing.Size(113, 23);
+            this.btnServicioCliente.Size = new System.Drawing.Size(129, 83);
             this.btnServicioCliente.TabIndex = 3;
             this.btnServicioCliente.Text = "Servicios Cliente";
             this.btnServicioCliente.UseVisualStyleBackColor = true;
@@ -89,9 +90,9 @@
             // 
             // btnTarjeta
             // 
-            this.btnTarjeta.Location = new System.Drawing.Point(403, 130);
+            this.btnTarjeta.Location = new System.Drawing.Point(557, 248);
             this.btnTarjeta.Name = "btnTarjeta";
-            this.btnTarjeta.Size = new System.Drawing.Size(113, 23);
+            this.btnTarjeta.Size = new System.Drawing.Size(129, 83);
             this.btnTarjeta.TabIndex = 4;
             this.btnTarjeta.Text = "Tarjeta Crédito";
             this.btnTarjeta.UseVisualStyleBackColor = true;
@@ -99,9 +100,9 @@
             // 
             // btnCuentaCliente
             // 
-            this.btnCuentaCliente.Location = new System.Drawing.Point(522, 130);
+            this.btnCuentaCliente.Location = new System.Drawing.Point(87, 389);
             this.btnCuentaCliente.Name = "btnCuentaCliente";
-            this.btnCuentaCliente.Size = new System.Drawing.Size(113, 23);
+            this.btnCuentaCliente.Size = new System.Drawing.Size(129, 83);
             this.btnCuentaCliente.TabIndex = 5;
             this.btnCuentaCliente.Text = "Cuenta Cliente";
             this.btnCuentaCliente.UseVisualStyleBackColor = true;
@@ -111,7 +112,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(780, 485);
             this.Controls.Add(this.btnCuentaCliente);
             this.Controls.Add(this.btnTarjeta);
             this.Controls.Add(this.btnServicioCliente);
